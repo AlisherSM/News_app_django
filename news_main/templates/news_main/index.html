@@ -1,0 +1,43 @@
+{% extends 'news_main/base.html' %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block main %}
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand text-light">News.uz</a>
+        <form class="d-flex">
+            <input class="form-control me-4" type="search" placeholder="Введите ключевую фразу..." aria-label="Search"
+                style="width: 300px;">
+            <button class="btn btn-outline-success text-dark bg-light" type="submit">Поиск</button>
+        </form>
+    </div>
+</nav>
+
+
+<div class="h1 text-center mt-3 mb-3">Главные новости в Узбекистане</div>
+
+<div class="container d-flex justify-content-center flex-wrap">
+    <!-- {% for i in news %} -->
+    <div class="card mb-3 me-3" style="max-width: 500px;">
+        <div class="row">
+            <div class="col-md-5">
+                <img src="..." class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-7">
+                <div class="card-body">
+                    <h5 class="card-title">{{i.title}}</h5>
+                    <p class="card-text">{{i.text}}.</p>
+                </div>
+            </div>
+        </div>
+    <!-- {% endfor %} -->
+    </div>
+
+</div>
+
+
+
+
+</div>
+{% endblock %}
